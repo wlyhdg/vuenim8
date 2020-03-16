@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Modal</router-link> |
+      <router-link to="/list">List</router-link>
     </div>
-    <router-view />
+    <transition name="slide-fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -28,5 +30,47 @@
       color: #42b983;
     }
   }
+}
+
+/* Transitions */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+.slide-fade-enter {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.slide-up-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.slide-up-enter-active {
+  transition: all 0.2s ease;
+}
+
+.slide-up-move {
+  // "move" class specifies what happens to item in transition-group
+  transition: transform 0.8s ease-in;
 }
 </style>
