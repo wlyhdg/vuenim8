@@ -8,7 +8,8 @@
       <router-link to="/simple">Simple</router-link> |
       <router-link to="/stagger">Stagger</router-link> |
       <router-link to="/state">State</router-link> |
-      <router-link to="/timeline">Timeline</router-link>
+      <router-link to="/timeline">Timeline</router-link> |
+      <router-link to="/master">Master</router-link>
     </div>
     <!-- <transition name="slide-fade" mode="out-in"> -->
     <router-view />
@@ -33,7 +34,7 @@
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: orangered;
     }
   }
 }
@@ -78,5 +79,15 @@
 .slide-up-move {
   // "move" class specifies what happens to item in transition-group
   transition: transform 0.8s ease-in;
+}
+
+button {
+  color: white;
+  background: linear-gradient(#d85b2f, #e88d5d);
+  padding: 1em;
+  margin: auto 0.2em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px rgba(26, 8, 1, 0.2);
 }
 </style>
