@@ -3,6 +3,9 @@ import VueRouter from "vue-router";
 import Modal from "../views/Modal.vue";
 import Drawer from "../views/Drawer.vue";
 import Cards from "../views/Cards.vue";
+import Simple from "../views/Simple.vue";
+import Stagger from "../views/Stagger.vue";
+import State from "../views/State.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +24,21 @@ const routes = [
     path: "/cards",
     name: "Cards",
     component: Cards
+  },
+  {
+    path: "/simple",
+    name: "Simple",
+    component: Simple
+  },
+  {
+    path: "/stagger",
+    name: "Stagger",
+    component: Stagger
+  },
+  {
+    path: "/state",
+    name: "State",
+    component: State
   },
   {
     path: "/list",
